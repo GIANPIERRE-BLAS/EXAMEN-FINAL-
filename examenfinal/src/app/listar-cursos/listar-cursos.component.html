@@ -1,0 +1,17 @@
+<h1>Informacion de cursos</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Profesor</th>          
+        </tr>
+    </thead>
+    <tbody>
+        @for(curso of cursos; track curso.id ){
+     <td>{{ curso.id }}</td>
+      <td>{{ curso.nombre }}</td>
+      <td>{{ curso.profesor.nombre }} {{ curso.profesor.apellido }}</td>     
+        }
+    </tbody>
+</table>
